@@ -1,0 +1,9 @@
+project: gss-ntlmssp
+target: fuzz-accept-sec-context
+cmds:
+  - cmd: /mayhem/fuzz-accept-sec-context
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/fuzz-accept-sec-context.dict
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-accept-sec-context/testsuite
